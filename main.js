@@ -36,23 +36,20 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // 2. 주간 픽업 데이터 관리 (매주 새로운 픽업이 나오면 배열의 맨 위에 추가하시면 됩니다)
+  // 2. 픽업 데이터 관리 (전체 픽업표 / 이번 주 픽업표)
   const weeklyPickupData = [
     {
-      id: "latest",
-      title: "🔥 이번 주 픽업 (최신)",
-      imgSrc: "pickup.png",
-      note: "현재 진행 중인 이번 주 추천 영웅 픽업표입니다."
+      id: "weekly",
+      title: "🔥 이번 주 픽업",
+      imgSrc: "pickup_weekly.png", // 이번 주 픽업 이미지 파일명 (원하시는 파일명으로 변경 가능)
+      note: "이번 주 신규/특별 추천 픽업 목록입니다."
     },
-    /*
-    // 예시: 지나간 주차 데이터를 보관하고 싶을 때 아래처럼 추가하면 됩니다.
     {
-      id: "oct_w4",
-      title: "10월 4주차 픽업",
-      imgSrc: "pickup_oct_w4.png",
-      note: "10월 4주차 추천 영웅 픽업 기록입니다."
+      id: "all",
+      title: "📋 전체 픽업표",
+      imgSrc: "pickup.png", // 기존 전체 픽업표 이미지
+      note: "전체 기간 추천 영웅 종합 픽업표입니다."
     }
-    */
   ];
 
   const weeklyTabContainer = document.getElementById('weekly-tab-container');
