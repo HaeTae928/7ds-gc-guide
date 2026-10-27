@@ -37,11 +37,11 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
 
-  // 2. 마수전 6종 데이터
+  // 2. 마수전 6종 데이터 (루트 경로 파일명 적용)
   const beastData = {
     hresvelgr: {
       name: "🦅 흐레스벨그 마수전",
-      imgSrc: "마수전/흐레스벨그.png",
+      imgSrc: "흐레스벨그.png",
       stages: ["1층: 마수", "2층: 대마수", "3층: 초마수", "4층: 초월마수"],
       recommendDeck: "토르 / 메겔다 / UR 멜리오다스 / 얼티밋 이스탈린 / 다이앤",
       summary: `[기본 설정 및 특성]
@@ -69,9 +69,9 @@ document.addEventListener('DOMContentLoaded', function() {
     },
     eikthyrnir: {
       name: "🦌 에이크쉬르니르 마수전",
-      imgSrc: "마수전/에이크쉬르니르.png",
+      imgSrc: "에이크쉬르니르.png",
       stages: ["1층: 마수", "2층: 대마수", "3층: 초마수", "4층: 초월마수"],
-      recommendDeck: "요르문간드 / 프레이 / 빛엘리 / 다이앤 (또는 라그나로크 조합)",
+      recommendDeck: "요르문간드 / 프레이 / 빛엘리 / 다이앤",
       summary: `[기본 설정 및 특성]
 • 악연 효과: 파티에 요르문간드 편성 시 요르문간드 모든 능력치 10% 증가, 아군 영웅 기본 능력치 10% 증가
 • 마수 특징: 디버프 및 반사 피해 면역 / 회피 무시 / 1~3층 아군 생명 제외 생명 관련 능력 40% 감소
@@ -104,9 +104,9 @@ document.addEventListener('DOMContentLoaded', function() {
     },
     skollhati: {
       name: "🐺 스콜과 하티 마수전",
-      imgSrc: "마수전/스콜과 하티.png",
+      imgSrc: "스콜과 하티.png",
       stages: ["1층: 마수", "2층: 대마수", "3층: 초마수", "4층: 초월마수"],
-      recommendDeck: "도나르 / 탐나는 로키 트라브 / 프레이 / 마엘 (또는 나시엔스 활용)",
+      recommendDeck: "도나르 / 탐나는 로키 트라브 / 프레이 / 마엘",
       summary: `[기본 설정 및 특성]
 • 악연 효과: 파티에 도나르 편성 시 도나르 모든 능력치 20% 증가 및 각 페이즈 시작 시 아군 스킬 랭크 업
 • 마수 구분: 하양(4층 노랑) = [스콜] / 검정 = [하티]
@@ -130,9 +130,9 @@ document.addEventListener('DOMContentLoaded', function() {
     },
     nidhoggr: {
       name: "🐍 니드호그 마수전",
-      imgSrc: "마수전/니드호그.png",
+      imgSrc: "니드호그.png",
       stages: ["1층: 마수", "2층: 대마수", "3층: 초마수"],
-      recommendDeck: "마엘 / 빛엘리 / 프레이야 / 마르가렛 (또는 여엘 활용 덱)",
+      recommendDeck: "마엘 / 빛엘리 / 프레이야 / 마르가렛",
       summary: `[기본 설정 및 특성]
 • 패시브 특성: 아군의 생명력을 제외한 생명 관련 능력 40% 감소
 • 핵심 요점: 자세 해제 스킬 필수 배치 / 각 층·페이즈별 불사게이지증감 스킬 및 약점 종류 숙지
@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 [3층 (초마수)]
 • 1페이즈: 마수 35% 브레이크 & 불사게이지 0% 시작
-  - 마수 턴 시작 시 불사게이지 54% 증가 (공증 시 추가 증가) / 스킬 사용 시 7~9% 감소, 필살기 사용 시 33.3% 감소
+  - 마수 턴 시작 시 불사게이지 54% 증가 / 스킬 사용 시 7~9% 감소, 필살기 사용 시 33.3% 감소
   - 마수 버프 스킬 직후 아군 턴에 첫 사용한 스킬 종류 2턴간 봉인
 • 2페이즈: 마수 35% 브레이크 & 최피감 20% 4개 & 불사게이지 0% 시작 (게이지 0% 시 주피증 50%)
   - 자세 해제 스킬 시 게이지 15% 증가 & 최피감 1개 해제 & 약점 노출 (버프/자세/회복/필살기 중 랜덤)
@@ -163,7 +163,7 @@ document.addEventListener('DOMContentLoaded', function() {
     },
     ratatoskr: {
       name: "🐿️ 라타토스크 마수전",
-      imgSrc: "마수전/라타토스크.png",
+      imgSrc: "라타토스크.png",
       stages: ["1층: 마수", "2층: 대마수", "3층: 초마수"],
       recommendDeck: "발렌티 / 신각 킹 / 다이앤 / 엘리자베스",
       summary: `[기본 설정 및 특성]
@@ -190,58 +190,58 @@ document.addEventListener('DOMContentLoaded', function() {
     },
     surtr: {
       name: "🔥 수르트 & 태초의 불꽃",
-      imgSrc: "마수전/수르트&태초의 불꽃.png",
+      imgSrc: "수르트&태초의 불꽃.png",
       stages: ["1층: 마수", "2층: 대마수", "3층: 초마수"],
-      recommendDeck: "불구대천 멜리오다스 / 신각킹 / 여멜 / 여반 (또는 오딘 조합)",
+      recommendDeck: "불구대천 멜리오다스 / 신각킹 / 여멜 / 여반",
       summary: "• 스펠 오브 케나즈 및 레바테인 기믹 파훼. 자세 해제 및 과열 해제 스킬 관리."
     }
   };
 
-  // 3. 기사단 보스전 5종 데이터
+  // 3. 기사단 보스전 5종 데이터 (루트 경로 적용)
   const guildData = {
     akumu: {
       name: "👹 아쿠무 (기사단 보스)",
-      imgSrc: "기사단보스전/아쿠무.png",
+      imgSrc: "아쿠무.png",
       recommendDeck: "고서 / 젤드리스 / 지왕 멜리오다스 / 에스타로사",
       summary: "• 시즌 미션 조건(디버프 부여 및 점수작)을 우선 파악하여 스킬 순서를 배치하는 것이 핵심입니다."
     },
     kelak: {
       name: "⚔️ 켈라크 (기사단 보스)",
-      imgSrc: "기사단보스전/켈라크.png",
+      imgSrc: "켈라크.png",
       recommendDeck: "더 윈 메이저 / 빛엘리 / 고서 / 프레이",
       summary: "• 단일 누적 딜 점수 산출이 중요하므로 딜 버프 스킬 중첩 타이밍을 노려 필살기를 사용합니다."
     },
     eineck: {
       name: "🛡️ 에이네크 (기사단 보스)",
-      imgSrc: "기사단보스전/에이네크.png",
+      imgSrc: "에이네크.png",
       recommendDeck: "체력 속성 중심 극딜 조합",
       summary: "• 방어력 감소 및 디버프 중첩을 통한 파쇄 극딜 딜타이밍 확보가 핵심입니다."
     },
     belgius: {
       name: "⚡ 베르기우스 (기사단 보스)",
-      imgSrc: "기사단보스전/베르기우스.png",
+      imgSrc: "베르기우스.png",
       recommendDeck: "자세 해제 및 버프 해제 스킬 보유 조합",
       summary: "• 베르기우스의 버프와 반격 자세를 적절히 해제하면서 미션 점수를 챙깁니다."
     },
     canopus: {
       name: "🌟 카노푸스 (기사단 보스)",
-      imgSrc: "기사단보스전/카노푸스.png",
+      imgSrc: "카노푸스.png",
       recommendDeck: "신각 킹 / 빛엘리 / 마엘 / 고서",
       summary: "• 광역 스킬 기반 딜링 및 신성 버프 관리가 고득점의 포인트입니다."
     }
   };
 
-  // 4. PVE 기타 콘텐츠 데이터 (마신왕전 이미지 경로: 마신왕전/마신왕.png)
+  // 4. PVE 기타 콘텐츠 데이터 (루트 경로 적용)
   const pveOtherData = {
     demonking: {
       title: "👑 마신왕전 공략",
-      imgSrc: "마신왕전/마신왕.png",
+      imgSrc: "마신왕.png",
       deck: "지왕 멜리오다스 / 빛엘리 / 고서 / 젤드리스",
       summary: "마신왕의 와일드 카운트 기믹을 계산하여 카드 이동 및 연쇄 스킬 사용 타이밍을 맞추는 것이 핵심입니다."
     },
     supreme: {
       title: "✨ 최고신전 공략",
-      imgSrc: "최고신전/boss.png",
+      imgSrc: "boss.png",
       deck: "최고신 전용 특수 패시브 대응 조합",
       summary: "은총 및 신성 버프 해제 타이밍과 궁극기 차단 패턴 관리가 공략의 핵심입니다."
     }
