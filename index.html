@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>일곱개의 대죄 GRANDCROSS</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome 아이콘 CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+  <!-- 내가 만든 CSS 연결 -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen">
+
+  <!-- 1. 상단 네비게이션 바 -->
+  <nav class="bg-slate-800 border-b border-slate-700 sticky top-0 z-50 shadow-md">
+    <div class="max-w-6xl mx-auto px-4 py-2.5 flex justify-between items-center">
+      
+      <!-- 로고 영역 -->
+      <div id="logo-btn" class="flex items-center cursor-pointer">
+        <img src="logo.png" alt="7DS 로고" class="h-12 w-auto object-contain">
+      </div>
+
+      <!-- 메뉴 버튼 영역 -->
+      <div class="flex gap-5 text-sm font-semibold">
+        <button class="nav-btn text-amber-400 border-b-2 border-amber-400 pb-1 transition-all" data-target="all-section">전체</button>
+        <button class="nav-btn text-slate-300 hover:text-amber-400 pb-1 transition-all" data-target="pve-section">PVE 공략</button>
+        <button class="nav-btn text-slate-300 hover:text-amber-400 pb-1 transition-all" data-target="pickup-section">픽업표</button>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- 메인 컨텐츠 영역 -->
+  <main class="max-w-6xl mx-auto p-4 my-6">
+
+    <!-- [1] 전체 보기 섹션 -->
+    <section id="all-section" class="content-section">
+      <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700 text-center">
+        <h1 class="text-2xl md:text-3xl font-bold text-amber-400 mb-3">일곱 개의 대죄: GRAND CROSS 공략소</h1>
+        <p class="text-slate-400 text-sm">원하시는 상단 메뉴를 클릭하여 PVE 공략 및 최신 픽업표를 확인해 보세요!</p>
+      </div>
+    </section>
+
+    <!-- [2] PVE 공략 섹션 -->
+    <section id="pve-section" class="content-section hidden">
+      <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700">
+        
+        <h2 class="text-xl md:text-2xl font-bold text-amber-400 mb-6 flex items-center gap-2">
+          <i class="fa-solid fa-swords"></i> PVE 핵심 공략
+        </h2>
+
+        <!-- PVE 메인 카테고리 탭 (4가지) -->
+        <div class="flex flex-wrap gap-2 border-b border-slate-700 pb-4 mb-6">
+          <button class="pve-main-tab bg-amber-500 text-slate-950 font-bold px-4 py-2 rounded-xl text-sm transition-all" data-pve="beast">
+            🐉 마수전
+          </button>
+          <button class="pve-main-tab bg-slate-700 hover:bg-slate-600 text-slate-200 font-bold px-4 py-2 rounded-xl text-sm transition-all" data-pve="guild">
+            🛡️ 기사단 보스전
+          </button>
+          <button class="pve-main-tab bg-slate-700 hover:bg-slate-600 text-slate-200 font-bold px-4 py-2 rounded-xl text-sm transition-all" data-pve="demonking">
+            👑 마신왕전
+          </button>
+          <button class="pve-main-tab bg-slate-700 hover:bg-slate-600 text-slate-200 font-bold px-4 py-2 rounded-xl text-sm transition-all" data-pve="supreme">
+            ✨ 최고신전
+          </button>
+        </div>
+
+        <!-- [마수전 서브 영역] -->
+        <div id="beast-sub-menu" class="mb-6">
+          <div class="flex flex-wrap gap-2 md:gap-3">
+            <button class="beast-tab bg-amber-500 text-slate-950 font-bold px-3.5 py-1.5 rounded-lg text-xs md:text-sm transition-all" data-beast="hresvelgr">
+              🦅 흐레스벨그
+            </button>
+            <button class="beast-tab bg-slate-700 hover:bg-slate-600 text-slate-200 font-bold px-3.5 py-1.5 rounded-lg text-xs md:text-sm transition-all" data-beast="eikthyrnir">
+              🦌 에이크쉬르니르
+            </button>
+            <button class="beast-tab bg-slate-700 hover:bg-slate-600 text-slate-200 font-bold px-3.5 py-1.5 rounded-lg text-xs md:text-sm transition-all" data-beast="skollhati">
+              🐺 스콜과 하티
+            </button>
+            <button class="beast-tab bg-slate-700 hover:bg-slate-600 text-slate-200 font-bold px-3.5 py-1.5 rounded-lg text-xs md:text-sm transition-all" data-beast="nidhoggr">
+              🐍 니드호그
+            </button>
+            <button class="beast-tab bg-slate-700 hover:bg-slate-600 text-slate-200 font-bold px-3.5 py-1.5 rounded-lg text-xs md:text-sm transition-all" data-beast="ratatoskr">
+              🐿️ 라타토스크
+            </button>
+            <button class="beast-tab bg-slate-700 hover:bg-slate-600 text-slate-200 font-bold px-3.5 py-1.5 rounded-lg text-xs md:text-sm transition-all" data-beast="surtr">
+              🔥 수르트 & 태초의 불꽃
+            </button>
+          </div>
+        </div>
+
+        <!-- [기사단 보스전 서브 영역] (신규 추가) -->
+        <div id="guild-sub-menu" class="mb-6 hidden">
+          <div class="flex flex-wrap gap-2 md:gap-3">
+            <button class="guild-tab bg-amber-500 text-slate-950 font-bold px-3.5 py-1.5 rounded-lg text-xs md:text-sm transition-all" data-guild="akumu">
+              👹 아쿠무
+            </button>
+            <button class="guild-tab bg-slate-700 hover:bg-slate-600 text-slate-200 font-bold px-3.5 py-1.5 rounded-lg text-xs md:text-sm transition-all" data-guild="kelak">
+              ⚔️ 켈라크
+            </button>
+            <button class="guild-tab bg-slate-700 hover:bg-slate-600 text-slate-200 font-bold px-3.5 py-1.5 rounded-lg text-xs md:text-sm transition-all" data-guild="eineck">
+              🛡️ 에이네크
+            </button>
+            <button class="guild-tab bg-slate-700 hover:bg-slate-600 text-slate-200 font-bold px-3.5 py-1.5 rounded-lg text-xs md:text-sm transition-all" data-guild="belgius">
+              ⚡ 베르기우스
+            </button>
+            <button class="guild-tab bg-slate-700 hover:bg-slate-600 text-slate-200 font-bold px-3.5 py-1.5 rounded-lg text-xs md:text-sm transition-all" data-guild="canopus">
+              🌟 카노푸스
+            </button>
+          </div>
+        </div>
+
+        <!-- PVE 공략 상세 내용 출력 박스 -->
+        <div id="pve-content" class="bg-slate-900 p-6 rounded-xl border border-slate-700">
+          <!-- main.js에서 내용이 바뀝니다 -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- [3] 픽업표 섹션 -->
+    <section id="pickup-section" class="content-section hidden">
+      <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700 shadow-2xl">
+        <h2 class="text-xl md:text-2xl font-bold text-amber-400 mb-5 flex items-center gap-2">
+          <i class="fa-solid fa-calendar-days"></i> 신캐 / 페스티벌 픽업 일정표
+        </h2>
+        
+        <div class="overflow-x-auto rounded-lg border border-slate-600 bg-white p-2">
+          <img src="pickup.png" alt="7DS GC 픽업 일정표" class="w-full h-auto min-w-[700px] object-contain mx-auto">
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 내가 만든 JS 연결 -->
+  <script src="main.js"></script>
+</body>
+</html>
