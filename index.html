@@ -19,8 +19,7 @@
       </div>
       
       <nav class="flex items-center gap-6 font-semibold">
-        <!-- '전체' 버튼 제거 완료 -->
-        <button data-target="pickup-section" class="nav-btn text-amber-400 border-b-2 border-amber-400 pb-1 hover:text-amber-300">이번 주 픽업</button>
+        <button data-target="pickup-section" class="nav-btn text-amber-400 border-b-2 border-amber-400 pb-1 hover:text-amber-300">주간 픽업 정보</button>
         <button data-target="pve-section" class="nav-btn text-slate-300 pb-1 hover:text-amber-400">PVE 공략</button>
       </nav>
     </div>
@@ -28,12 +27,22 @@
 
   <main class="max-w-6xl mx-auto px-4 py-6">
     
-    <!-- 기본 화면: 이번 주 픽업 섹션 -->
+    <!-- 기본 화면: 주간 픽업 정보 섹션 -->
     <section id="pickup-section" class="content-section">
-      <div class="bg-slate-800 border border-slate-700 rounded-xl p-5 mb-6 text-center">
-        <h2 class="text-xl font-bold text-amber-400 mb-4"><i class="fa-solid fa-star"></i> 이번 주 픽업 추천표</h2>
-        <div class="flex justify-center">
-          <img src="pickup.png" alt="이번 주 픽업표" class="max-w-full h-auto rounded-lg border border-slate-700 shadow-lg" onerror="this.alt='pickup.png 이미지를 최상위 경로에 업로드해 주세요.'">
+      <div class="bg-slate-800 border border-slate-700 rounded-xl p-5 mb-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4 pb-3 border-b border-slate-700">
+          <h2 class="text-xl font-bold text-amber-400 flex items-center gap-2">
+            <i class="fa-solid fa-star"></i> 주간 픽업 추천표
+          </h2>
+          <!-- 주차 선택 탭 -->
+          <div id="weekly-tab-container" class="flex flex-wrap gap-2">
+            <!-- main.js에서 주차별 버튼이 동적으로 생성됩니다 -->
+          </div>
+        </div>
+
+        <!-- 선택된 주차 픽업 정보 출력 영역 -->
+        <div id="weekly-pickup-content" class="flex flex-col items-center">
+          <!-- main.js에서 픽업 이미지 및 설명이 동적으로 출력됩니다 -->
         </div>
       </div>
     </section>
