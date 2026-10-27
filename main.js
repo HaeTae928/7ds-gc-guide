@@ -30,14 +30,15 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
+  // 로고 클릭 시 기본 페이지(이번 주 픽업)로 이동
   if (logoBtn) {
     logoBtn.addEventListener('click', function() {
-      showSection('all-section');
+      showSection('pickup-section');
     });
   }
 
 
-  // 2. 마수전 6종 데이터 (루트 경로 파일명 적용)
+  // 2. 마수전 6종 데이터
   const beastData = {
     hresvelgr: {
       name: "🦅 흐레스벨그 마수전",
@@ -197,7 +198,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   };
 
-  // 3. 기사단 보스전 5종 데이터 (루트 경로 적용)
+  // 3. 기사단 보스전 5종 데이터
   const guildData = {
     akumu: {
       name: "👹 아쿠무 (기사단 보스)",
@@ -231,7 +232,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   };
 
-  // 4. PVE 기타 콘텐츠 데이터 (루트 경로 적용)
+  // 4. PVE 기타 콘텐츠 데이터
   const pveOtherData = {
     demonking: {
       title: "👑 마신왕전 공략",
